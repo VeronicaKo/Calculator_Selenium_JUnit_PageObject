@@ -1,7 +1,6 @@
 package core;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,10 +25,5 @@ public class Start {
         driver.manage().window().maximize();
         mainPage = PageFactory.initElements(driver, MainPage.class);
         calculatePage = PageFactory.initElements(driver, CalculatePage.class);
-    }
-
-    @AfterEach
-    public void finish() {
-        driver.quit();
     }
 }

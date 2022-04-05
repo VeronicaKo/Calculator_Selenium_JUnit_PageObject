@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class CalculatorTest extends Start {
 
     @Test
-    public void Calculator() {
+    public void calculator() {
         String[] textButtonForCalc = {"1", "×", "2", "−", "3", "+", "1"};
         mainPage.goTo()
                 .fillTextSearch("Калькулятор")
@@ -14,8 +14,9 @@ public class CalculatorTest extends Start {
         for (String buttonText : textButtonForCalc) {
             calculatePage.clickButtonOfCalc(buttonText);
         }
-        calculatePage.checkMemoryLine("1 × 2 - 3 + 1");
-        calculatePage.checkResultLine("Ans = 0");
 
+        calculatePage.checkMemoryLine("1 × 2 - 3 + 1")
+                .checkResultLine("Ans = 0")
+                .close();
     }
 }

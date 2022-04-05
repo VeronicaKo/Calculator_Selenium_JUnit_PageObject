@@ -26,4 +26,8 @@ public class CalculatePage extends BasePage {
         assertEquals(resultExpect, readField(By.xpath("//span[contains(text(),'Ans')]")));
         return this;
     }
+
+    public void close() {
+        closeBrowser();
+    }
 }

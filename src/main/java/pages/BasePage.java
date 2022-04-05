@@ -40,7 +40,8 @@ public class BasePage {
         return driver.findElement(elementBy).getText();
     }
 
-
-
+    public void closeBrowser() {
+        driver.quit();
+    }
 
 }
