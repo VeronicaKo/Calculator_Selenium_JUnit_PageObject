@@ -5,7 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import pages.CalculatePage;
+import pages.PicturePage;
+import pages.ResultOfSearchPage;
 import pages.MainPage;
 
 import java.time.Duration;
@@ -15,7 +16,9 @@ public class Start {
 
     public WebDriver driver;
     public MainPage mainPage;
-    public CalculatePage calculatePage;
+    public ResultOfSearchPage resultOfSearchPage;
+    public PicturePage picturePage;
+
 
     @BeforeEach
     public void start() {
@@ -24,6 +27,7 @@ public class Start {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         mainPage = PageFactory.initElements(driver, MainPage.class);
-        calculatePage = PageFactory.initElements(driver, CalculatePage.class);
+        resultOfSearchPage = PageFactory.initElements(driver, ResultOfSearchPage.class);
+        picturePage = PageFactory.initElements(driver, PicturePage.class);
     }
 }

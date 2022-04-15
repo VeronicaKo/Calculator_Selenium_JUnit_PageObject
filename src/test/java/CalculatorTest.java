@@ -12,11 +12,11 @@ public class CalculatorTest extends Start {
                 .clickSearchButton();
 
         for (String buttonText : textButtonForCalc) {
-            calculatePage.clickButtonOfCalc(buttonText);
+            resultOfSearchPage.clickButtonOfCalc(buttonText);
         }
 
-        calculatePage.checkMemoryLine("1 × 2 - 3 + 1")
-                .checkResultLine("Ans = 0")
+        resultOfSearchPage.checkMemoryLineOfCalc("1 × 2 - 3 + 1")
+                .checkResultLineOfCalc("Ans = 0")
                 .close();
     }
 }
